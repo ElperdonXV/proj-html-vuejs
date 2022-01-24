@@ -34,18 +34,18 @@
                             <li>
                                 <a class="dropdown-item" >
                                     <img src="../assets/fr.png" alt="" class="lingua">
-                                    FRANCE
+                                    France
                                 </a>
                             </li>
                             <li>
                                 <a class="dropdown-item" >
                                     <img src="../assets/de.png" alt="" class="lingua">
-                                    GERMAN
+                                    German
                                 </a>
                             </li>
                         </ul>
                     </li>
-
+                    <i class="far fa-user-circle"/>
                 </ul>
                 <form class="d-flex">
                     <input class="mysearch" type="search" placeholder="Search" aria-label="Search">
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import '@fortawesome/fontawesome-free/css/all.css';
 export default {
     name: 'Header',
     data(){
