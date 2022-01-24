@@ -1,5 +1,16 @@
 <template>
-  <header>1</header>
+  <header>
+      <ul>
+          <li v-for="(link, index) in links" :key="index">
+              <h1>{{link.name}}</h1>
+              <ul>
+                  <li v-for="(sub, counter) in link.sublink" :key="counter">
+                      <h2>{{sub.name}}</h2>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </header>
 </template>
 
 <script>
@@ -75,5 +86,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
