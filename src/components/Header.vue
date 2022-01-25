@@ -45,12 +45,18 @@
                             </li>
                         </ul>
                     </li>
-                    <i class="far fa-user-circle"/>
+                    <a href="#">
+                        <i class="far fa-user-circle"/>
+                    </a>
                 </ul>
-                <form class="d-flex">
-                    <input class="mysearch" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                <div class="form">
+                    <form class="d-flex">
+                        <input class="mysearch" type="search" placeholder="Search..." aria-label="Search">
+                        <a href="">
+                            <i class="fas fa-search search"></i>
+                        </a>
+                    </form>
+                </div>
             </div>
             </div>
         </div>
@@ -134,9 +140,10 @@ export default {
 <style lang="scss">
 @import "../assets/scss/partials/_variables.scss";
     header{
+        height: 100px;
         font-family: $font;
         .logo{
-            height: 30px;
+            height: 25px;
         }
         .my-nav{
             gap: 100px;
@@ -147,6 +154,27 @@ export default {
                 color: $tuna !important;
                 font-size: 1.1em;
                 font-weight: 400;
+            }
+        }
+        .right{
+            i{
+                font-size: 2em;
+                margin-right: 10px;
+                margin-left: 5px;
+            }
+            .form{
+                border-left: 1px solid lightgrey;
+                padding-left: 10px;
+                align-self: center;
+            }
+            input{
+                border: none;
+            }
+            input:active, input:focus-visible{
+                outline: none;
+            } 
+            .search{
+                font-size: 1em;
             }
         }
     }
