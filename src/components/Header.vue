@@ -1,7 +1,7 @@
 <template>
   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container p-3">
+        <div class="container-fluid">
             <div class="my-nav d-flex justify-content-between">
                 <div class="brand">
                 <a class="navbar-brand" href="#">
@@ -140,13 +140,23 @@ export default {
 <style lang="scss">
 @import "../assets/scss/partials/_variables.scss";
     header{
-        height: 100px;
+        height: 80px;
         font-family: $font;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .navbar .container-fluid{
+            display: block;
+        }
+        .brand{
+            flex-grow: 1;
+            margin-left: 180px;
+        }
         .logo{
             height: 25px;
         }
         .my-nav{
-            gap: 100px;
+            //gap: 100px;
             align-items: center;
         }
         nav{
@@ -165,10 +175,13 @@ export default {
             .form{
                 border-left: 1px solid lightgrey;
                 padding-left: 10px;
+                justify-self: flex-end;
                 align-self: center;
+                height: 100%;
             }
             input{
                 border: none;
+                height: 100%;
             }
             input:active, input:focus-visible{
                 outline: none;

@@ -24,4 +24,8 @@ export default {
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700&family=PT+Sans+Narrow:wght@400;700&display=swap');
+#app{
+  max-width: 100%;
+  overflow: hidden;
+}
 </style>

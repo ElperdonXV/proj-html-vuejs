@@ -30,7 +30,7 @@ name: 'Jumbo',
 @import "../assets/scss/partials/_variables.scss";
     .jumbotron{
         height: 700px;
-        background-color: $porcelain;
+        background-color: $water;
         position: relative;
         padding-left: 400px;
         .text{
