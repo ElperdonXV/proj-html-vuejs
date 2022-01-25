@@ -22,7 +22,8 @@ export default {
 @import "../assets/scss/partials/_variables.scss";
     .explore{
         background-color: $porcelain;
-         padding-top: 100px;
+        padding-top: 100px;
+        padding-bottom: 20px;
         h2,h3{
             text-align: center;
         }

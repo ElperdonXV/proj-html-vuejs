@@ -1,10 +1,15 @@
 <template>
   <div class="carousel m-5">
       <div class="row row-col-3 my-row">
-          <div :key="index" v-for="(card, index) in pages[counter].cards" class="col-3 card shadow-lg">
-            <img :src="`../assets/${card.img}`" alt="">  
-            <h1>{{card.title}}</h1>
-            <p>{{card.description}}</p>
+          <div :key="index" v-for="(card,index) in pages[counter].cards" class="card mb-3 shadow col-3">
+              <img src="../assets/home-business-service-slide-01-480x298.jpg" alt="">
+              <div class="card-body">
+                <h1 class="m-2">{{card.title}}</h1>
+                <p class="m-2">{{card.description}}</p>
+               </div>
+              <div class="card-footer bg-transparent">
+                <a href="#">Discover now &rarr;</a>
+              </div>
           </div>   
       </div>
      <div class="nav m-5">
@@ -23,26 +28,26 @@ export default {
           {
             cards: [
               {
-                img: 'logo.png',
+                srg: 'logo.png',
                 title: 'Consultive Training',
                 description: 'With a coach adressing multiple issues that are off balance, affecting your nusiness in various unconsidered ways',
               },
               {
-              img: 'en.png',
-              title: 'Real Deal Coaching',
-              description: 'With a coach adressing multiple issues that are off balance, affecting your nusiness in various unconsidered ways',
+                src: 'en.png',
+                title: 'Real Deal Coaching',
+                description: 'With a coach adressing multiple issues that are off balance, affecting your nusiness in various unconsidered ways',
               },
               {
-              img: 'en.png',
-              title: 'Advisor Training Program',
-              description: 'With a coach adressing multiple issues that are off balance, affecting your nusiness in various unconsidered ways',
+                src: 'en.png',
+                title: 'Advisor Training Program',
+                description: 'With a coach adressing multiple issues that are off balance, affecting your nusiness in various unconsidered ways',
               },
             ], 
           },
           {
             cards:[
               {
-                img: '',
+                src: '',
                 title: 'hei',
                 description: 'no',
               }
@@ -51,7 +56,7 @@ export default {
           {
             cards: [
               {
-                img: '',
+                src: '',
                 title: 'si',
                 description: 'si',
               } 
@@ -69,9 +74,38 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/scss/partials/_variables.scss";
   .my-row{
     justify-content: center;
     gap: 20px;
+  }
+  .card{
+    text-align: center;
+    padding: 0 !important;
+    h1{
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    p{
+      color: $boulder;
+    }
+    .card-footer{
+      width: 100%;
+      a{
+        text-decoration: none;
+        font-weight: 700;
+        color: $mountain;
+      }
+      padding: 15px;
+    }
+    .card-footer:hover{
+      background-color: $mountain!important;
+      border: none!important;
+      cursor: pointer;
+      a{
+        color: white;
+      }
+    }
   }
   .nav{
     align-items: center;
@@ -80,6 +114,7 @@ export default {
     i{
       font-size: 0.5em;
       color: grey;
+      cursor: pointer;
     }
     .active{
       font-size: 1.5em;

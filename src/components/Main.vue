@@ -3,6 +3,7 @@
     <Jumbo />
     <Services />
     <Explore />
+    <Cards />
   </main>
 </template>
 
@@ -10,12 +11,14 @@
 import Jumbo from './Jumbo.vue';
 import Services from './Services.vue';
 import Explore from './Explore.vue';
+import Cards from './Cards.vue';
 export default {
     name: 'Main',
     components: {
       Jumbo,
       Services,
       Explore,
+      Cards,
     },
     data(){
 
