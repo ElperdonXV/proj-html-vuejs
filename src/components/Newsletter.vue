@@ -6,7 +6,7 @@
                   <div class="circle">
                   </div>
               </div>
-              <div class="col flex-grow-2  d-flex flex-column justify-content-center align-items-center mycol">
+              <div class="col d-flex flex-column justify-content-center align-items-center mycol">
                 <h1 class="mb-4">Subscribe <span>Newsletters</span></h1>
                 <p class="mb-4">Enter your email address to register to our nrewsletter subscription delivered on a regular basis!</p>  
                 <div class="input-group mb-3">
@@ -34,7 +34,7 @@ name: 'Newsletter'
 <style lang="scss">
 @import "../assets/scss/partials/_variables.scss";
     .newsletter{
-        padding: 100px 0;
+        padding: 150px 0;
         .circle{
             width: 50px;
             height: 50px;
@@ -52,6 +52,7 @@ name: 'Newsletter'
         }
         .mycol{
             text-align: center;
+            flex-grow: 2;
             h1{
                 font-size: 3em;
                 font-weight: 800;
