@@ -5,8 +5,8 @@
           <h3 class="mb-5">What make they love us?</h3>
           <div class="row gap-4">
               <div :key="index" v-for="(review,index) in reviews" class="col card p-3">
-                  <h4 class="mb-2">{{review.title}}</h4>
-                  <p class="mb-2">{{review.text}}</p>
+                  <h4 class="mb-4">{{review.title}}</h4>
+                  <p class="mb-4">{{review.text}}</p>
                   <div class="row align-items-center">
                       <div class="col avatar mt-2">
                         <img src="../assets/testimonial-avata-03.jpg" alt="">
@@ -82,6 +82,11 @@ data (){
             padding: 40px!important;
             h4{
                 color: $tuna;
+                font-weight: 700;
+                font-size: 1.3em;
+            }
+            p{
+                color: black;
             }
             .avatar{
                 flex-grow: 0;
@@ -89,6 +94,16 @@ data (){
                     border-radius: 50%;
                     width: 80px;
                 }   
+            }
+            h5{
+                text-transform: uppercase;
+                color: $tuna;
+                font-weight: 700;
+                font-size: 1em;
+            }
+            h6{
+                font-size: 0.8em;
+                color: $boulder;
             }
         }
     }
