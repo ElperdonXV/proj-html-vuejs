@@ -94,9 +94,9 @@ export default {
         }
         .decoration{
             position: absolute;
-            bottom: 0px;
-            left: 40px;
-            z-index: 3;
+            bottom: 70px;
+            left: 170px;
+            z-index: 0;
         }
         .z-in{
             z-index: 4;

@@ -5,6 +5,7 @@
     <Explore />
     <Cards />
     <Business />
+    <Events />
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import Services from './Services.vue';
 import Explore from './Explore.vue';
 import Cards from './Cards.vue';
 import Business from './Business.vue';
+import Events from './Events.vue';
 export default {
     name: 'Main',
     components: {
@@ -22,6 +24,7 @@ export default {
       Explore,
       Cards,
       Business,
+      Events,
     },
     data(){
 
