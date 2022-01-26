@@ -58,6 +58,15 @@ data (){
             },
         ]
     }
+}, 
+methods: {
+    clickCircle(index){
+        this.counter = index;
+        this.reviews.forEach(element => {
+                  element.active = false;
+                });
+        this.reviews[this.counter].active = true;         
+    }
 }
 }
 </script>
