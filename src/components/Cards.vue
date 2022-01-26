@@ -71,6 +71,7 @@ export default {
 @import "../assets/scss/partials/_variables.scss";
   .cards{
     padding-top: 100px;
+    padding-bottom: 100px;
     h2,h3{
       text-align: center;
     }

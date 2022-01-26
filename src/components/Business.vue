@@ -1,16 +1,15 @@
 <template>
-  <section class="business">
-      <div class="bg  relative">
+  <section class="business relative">
+      <div class="bg relative">
+          <div class="decoration">
+            <img src="../assets/maxcoach-shape-07.png" alt="" >
+        </div>
          <div class="world">
             <img src="../assets/background-map-dots-top-right-transparent.png" alt="">
         </div>
-        <div class="decoration">
-          <img src="../assets/maxcoach-shape-07.png" alt="" >
-        </div>
-      </div>
-      <div class="container">
-          <div class="row align-items-center justify-contents-between gap-1">
-              <div class="col-7">
+         <div class="container">
+          <div class="row align-items-center justify-contents-between gap-5">
+              <div class="col flex-grow-0">
                   <div class="youtube relative">
                       <img src="../assets/home-business-video-poster-670x450.jpg" alt="" class="rounded-3">
                       <div class="play">
@@ -29,6 +28,7 @@
                   </div>
               </div>
           </div>
+      </div>
       </div>
   </section>
 </template>
@@ -72,12 +72,13 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/partials/_variables.scss";
-    .business{
-        margin-top: 100px;
-        padding: 100px;
-        background-color: $charade;
-        .relative{
+    .relative{
             position: relative;
+        }
+    .business{
+        background-color: $charade;
+        .container{
+            padding: 150px 0;
         }
         .play{
             position: absolute;
@@ -87,16 +88,15 @@ export default {
         }
         .world{
             position: absolute;
-            top: -100px;
-            /* bottom: 600px; */
-            left: 730px;
-            /* right: 0; */
+            top: 0px;
+            right: 0px;
             z-index: 0;
         }
         .decoration{
             position: absolute;
-            top: 380px;
-            left: 95px;
+            bottom: 0px;
+            left: 40px;
+            z-index: 3;
         }
         .z-in{
             z-index: 4;
