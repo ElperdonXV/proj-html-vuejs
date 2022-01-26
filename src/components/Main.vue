@@ -6,6 +6,7 @@
     <Cards />
     <Business />
     <Events />
+    <Newsletter />
   </main>
 </template>
 
@@ -16,6 +17,7 @@ import Explore from './Explore.vue';
 import Cards from './Cards.vue';
 import Business from './Business.vue';
 import Events from './Events.vue';
+import Newsletter from './Newsletter.vue';
 export default {
     name: 'Main',
     components: {
@@ -25,6 +27,7 @@ export default {
       Cards,
       Business,
       Events,
+      Newsletter,
     },
     data(){
 
