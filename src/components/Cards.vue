@@ -53,6 +53,10 @@
             </div>
           </div>
         </div>
+        <p class="call mt-5">
+          Take the control of their life back and start doing things to male their dream come true.
+           <a href="">View all courses &rarr;</a>
+        </p>
       </div>
   </section>
 </template>
@@ -114,6 +118,15 @@ export default {
     }
     .card:hover .bottom{
       display: block;
+    }
+    .call{
+      text-align: center;
+      font-weight: 600;
+      font-size: 1em;
+      a{
+        color: black;
+        font-weight: 700;
+      }
     }
   }
 </style>

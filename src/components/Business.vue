@@ -1,0 +1,96 @@
+<template>
+  <section class="business">
+      <div class="bg  relative">
+         <div class="world">
+            <img src="../assets/background-map-dots-top-right-transparent.png" alt="">
+        </div>
+        <div class="decoration">
+          <img src="../assets/maxcoach-shape-07.png" alt="" >
+        </div>
+      </div>
+      <div class="container">
+          <div class="row align-items-center justify-contents-between gap-1">
+              <div class="col-7">
+                  <div class="youtube relative">
+                      <img src="../assets/home-business-video-poster-670x450.jpg" alt="" class="rounded-3">
+                      <div class="play">
+                          <img src="../assets/icon-youtube-play.png" alt="">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-4 z-in">
+                  <h2>To thrive in Business Today, You'll Need a Good Plan</h2>
+                  <div class="dropdown d-flex gap-2">
+                      <i class="far fa-arrow-alt-circle-down"></i>
+                      <div class="text">
+                          <h3>How can we help?</h3>
+                          <p class="none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus nostrum, ullam illo aperiam ex omnis ab quae id consequatur atque animi repudiandae quis, obcaecati maiores autem pariatur illum alias?</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</template>
+
+<script>
+export default {
+    name: 'Business',
+    data(){
+        return{
+            isActive: false,
+        }
+    },
+    methods: {
+        click(){
+            
+        }
+    }
+}
+</script>
+
+<style lang="scss">
+@import "../assets/scss/partials/_variables.scss";
+    .business{
+        margin-top: 100px;
+        padding: 100px;
+        background-color: $charade;
+        .relative{
+            position: relative;
+        }
+        .play{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .world{
+            position: absolute;
+            top: -100px;
+            /* bottom: 600px; */
+            left: 730px;
+            /* right: 0; */
+            z-index: 0;
+        }
+        .decoration{
+            position: absolute;
+            top: 380px;
+            left: 95px;
+        }
+        .z-in{
+            z-index: 4;
+            h2,h3,p,i {
+                color: white;
+            }
+            h2{
+                font-size: 2.5em;
+                font-weight: 700;
+            }
+            i{
+                font-size: 1.5em;
+                padding-top: 5px;
+                cursor: pointer;
+            }
+        }
+    }    
+</style>
