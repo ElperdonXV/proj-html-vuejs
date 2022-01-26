@@ -65,7 +65,8 @@ methods: {
         this.reviews.forEach(element => {
                   element.active = false;
                 });
-        this.reviews[this.counter].active = true;         
+        this.reviews[this.counter].active = true;  
+        this.reviews.push(this.reviews.shift(this.reviews[this.counter]));      
     }
 }
 }
