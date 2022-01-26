@@ -19,12 +19,12 @@
                   </div>
               </div>
               <div class="col-4 z-in">
-                  <h2>To thrive in Business Today, You'll Need a Good Plan</h2>
-                  <div class="dropdown d-flex gap-2">
-                      <i class="far fa-arrow-alt-circle-down"></i>
+                  <h2 class="mb-5">To thrive in Business Today, You'll Need a Good Plan</h2>
+                  <div :key="index" v-for="(ask,index) in asks" class="dropdown d-flex gap-2">
+                      <i @click="click(index)" :class="(ask.active !== true) ? 'far fa-arrow-alt-circle-down' : 'far fa-arrow-alt-circle-up' + ' ' + 'green'"></i>
                       <div class="text">
-                          <h3>How can we help?</h3>
-                          <p class="none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus nostrum, ullam illo aperiam ex omnis ab quae id consequatur atque animi repudiandae quis, obcaecati maiores autem pariatur illum alias?</p>
+                          <h3 :class="(ask.active !== true) ? '' : 'green'">{{ask.title}}</h3>
+                          <p :class="(ask.active !== true) ? 'none' : 'show'">{{ask.paragraph}}</p>
                       </div>
                   </div>
               </div>
@@ -38,12 +38,33 @@ export default {
     name: 'Business',
     data(){
         return{
-            isActive: false,
+            asks: [
+                {
+                    title: 'How can we help?',
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus nostrum, ullam illo aperiam ex omnisab quae id consequatur atque animi repudiandae quis, obcaecati maiores autem pariatur illum alias?',
+                    active: true,
+                },
+                {
+                    title: 'Why would I need a business COACH?',
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus nostrum, ullam illo aperiam ex omnisab quae id consequatur atque animi repudiandae quis, obcaecati maiores autem pariatur illum alias?',
+                    active: false,
+                },
+                {
+                    title: 'What is one-on-one coaching?',
+                    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique doloribus nostrum, ullam illo aperiam ex omnisab quae id consequatur atque animi repudiandae quis, obcaecati maiores autem pariatur illum alias?',
+                    active: false,
+                },
+            ]
         }
     },
     methods: {
-        click(){
-            
+        click(index){
+            if (this.asks[index].active != true){
+                this.asks[index].active = true;
+            }
+            else{
+                this.asks[index].active = false;
+            }
         }
     }
 }
@@ -90,6 +111,19 @@ export default {
                 font-size: 1.5em;
                 padding-top: 5px;
                 cursor: pointer;
+            }
+            .dropdown{
+                padding: 15px;
+                border-bottom: 1px solid rgba($color: #ebebeb, $alpha: 0.3);
+            }
+            .none{
+                display: none;
+            }
+            .show{
+                display: block;
+            }
+            .green{
+                color: $mountain;
             }
         }
     }    
