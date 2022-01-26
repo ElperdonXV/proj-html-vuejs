@@ -1,6 +1,7 @@
 <template>
-  <section class="events">
-      <div class="container">
+  <section class="events-bg">
+      <div class="events">
+          <div class="container">
           <h2 class="mb-4">Wanna transform your life?</h2>
           <h3 class="mb-5">Upcoming Events</h3>
           <div class="row justify-content-center gap-4">
@@ -19,6 +20,7 @@
           </div>
           <p class="mt-5">Excited about our event? <a href="">View all events &rarr;</a></p>
       </div>
+    </div>  
   </section>
 </template>
 
@@ -72,67 +74,72 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/partials/_variables.scss";
-.events{
-    padding: 150px 0;
-    h2,h3,p{
-      text-align: center;
-    }
-    h2{
-      font-weight: 500;
-      color: $mountain;
-    }
-    h3{
-      font-weight: 700;
-      font-size: 2.2em;
-    }
-    .event{
-        padding: 25px;
-        background-color: $mygray;
-        .sx{
-            max-width: 200px;
-            i,span{
-                color: $boulder;
-            }
-            span{
-                font-size: 1em;
-                font-weight: 600;
-            }
-            h4{
-                font-size: 1.5em;
-                font-weight: 700;
-            }
-            
+.events-bg{
+    background-color: $mygray;
+    .events{
+        padding: 150px 0;
+        background-color: white;
+        clip-path: ellipse(125% 100% at 15.83% 0%);
+        h2,h3,p{
+            text-align: center;
         }
-        .dx{
-            h3{
-                color: $mountain;
-                font-size: 3.5em;
-                font-weight: 500;
-            }
-            h4{
-                font-size: 1.2em;
-                font-weight: 700;
-            }
-            .my-btn{
-            background-color: $mountain;
-            color: white;
+        h2{
+            font-weight: 500;
+            color: $mountain;
+        }
+        h3{
             font-weight: 700;
-            font-size: 1em;
-            padding: 10px 50px;
+            font-size: 2.2em;
+        }
+        .event{
+             padding: 25px;
+            background-color: $mygray;
+            .sx{
+                max-width: 200px;
+                i,span{
+                    color: $boulder;
+                }
+                span{
+                    font-size: 1em;
+                    font-weight: 600;
+                }
+                h4{
+                    font-size: 1.5em;
+                    font-weight: 700;
+                }
+            
             }
-            .my-btn:hover, .my-btn:active, .my-btn:focus{
-                background-color: $tuna;
-                box-shadow: none;
+            .dx{
+                h3{
+                    color: $mountain;
+                    font-size: 3.5em;
+                    font-weight: 500;
+                }
+                h4{
+                    font-size: 1.2em;
+                    font-weight: 700;
+                }
+                .my-btn{
+                    background-color: $mountain;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1em;
+                    padding: 10px 50px;
+                }
+                .my-btn:hover, .my-btn:active, .my-btn:focus{
+                    background-color: $tuna;
+                    box-shadow: none;
+                }
             }
         }
-    }
-    p{
-        font-size: 1.1em;
-        font-weight: 600;
+        p{
+            font-size: 1.1em;
+            font-weight: 600;
         a{
             color: $mountain;
             font-weight: 800;
         }
+    }
     }
 }
 </style>
