@@ -4,7 +4,7 @@
           <h2 class="mb-4">People are praising Maxcoach</h2>
           <h3 class="mb-5">What make they love us?</h3>
           <div class="row gap-4">
-              <div :key="index" v-for="(review,index) in reviews" class="col card p-3">
+              <div :key="index" v-for="(review,index) in reviews" class="col card p-3" :class="(review.active != false) ? '' : 'opacity'">
                   <h4 class="mb-4">{{review.title}}</h4>
                   <p class="mb-4">{{review.text}}</p>
                   <div class="row align-items-center">
@@ -19,7 +19,7 @@
               </div>
           </div>
           <div class="nav m-5">
-            <i @click="clickCircle(index)" :key="index" v-for="(circle, index) in reviews" class="fas fa-circle" :class="(counter == index) ? 'active' : ''"></i>
+            <i @click="clickCircle(index)" :key="index" v-for="(circle, index) in reviews" class="fas fa-circle" :class="(reviews[index].active != false) ? 'active' : ''"></i>
         </div>
       </div>
   </section>
@@ -38,6 +38,7 @@ data (){
                 title: 'High level of efficiency an scientific',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
                 img: '',
+                active: false,
             },
             {
                 name: 'Madley Pondor',
@@ -45,6 +46,7 @@ data (){
                 title: 'Professional team of specialists and passionate',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
                 img: '',
+                active: true,
             },
             {
                 name: 'Florence Themes',
@@ -52,6 +54,7 @@ data (){
                 title: 'A choice of quality for peaple with special needs',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
                 img: '',
+                active: false,
             },
         ]
     }
@@ -105,6 +108,9 @@ data (){
                 font-size: 0.8em;
                 color: $boulder;
             }
+        }
+        .opacity{
+            opacity: 50%;
         }
     }
     .container-fluid{
