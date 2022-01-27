@@ -9,7 +9,7 @@
                   <p class="mb-4">{{review.text}}</p>
                   <div class="row align-items-center">
                       <div class="col avatar mt-2">
-                        <img src="../assets/testimonial-avata-03.jpg" alt="">
+                        <img :src="require(`../assets/${review.img}`)" alt="">
                       </div>
                       <div class="col d-flex flex-column">
                           <h5 class="mb-2">{{review.name}}</h5>
@@ -37,7 +37,7 @@ data (){
                 about: '/Freelancer',
                 title: 'High level of efficiency an scientific',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
-                img: '',
+                img: 'testimonial-avata-02.jpg',
                 active: false,
             },
             {
@@ -45,7 +45,7 @@ data (){
                 about: '/IT Specialist',
                 title: 'Professional team of specialists and passionate',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
-                img: '',
+                img: 'testimonial-avata-03.jpg',
                 active: true,
             },
             {
@@ -53,7 +53,7 @@ data (){
                 about: '/Multimedia Admin',
                 title: 'A choice of quality for peaple with special needs',
                 text: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which',
-                img: '',
+                img: 'testimonial-avata-04.jpg',
                 active: false,
             },
         ]
